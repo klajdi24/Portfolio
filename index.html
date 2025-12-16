@@ -2,41 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Klajdi Bakiri | VR Room Project</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klajdi Bakiri | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-gray-100 text-gray-900">
-  <header class="text-center py-10 bg-white shadow">
-    <h1 class="text-4xl font-bold">Klajdi Bakiri</h1>
-    <p class="text-lg text-gray-600">Interactive VR Developer</p>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Klajdi Bakiri</h1>
+    <p>Interactive VR Developer</p>
   </header>
 
-  <main class="max-w-4xl mx-auto px-6 py-10">
-    <section class="bg-white p-6 rounded shadow">
-      <h2 class="text-2xl font-semibold mb-4">VR Room Project</h2>
-      <p class="mb-4 text-gray-700">
-        A virtual reality room environment built with Unity and XR Interaction Toolkit. This project demonstrates interactive object handling, immersive room setup, and basic VR mechanics using Unity and C#.
-      </p>
+  <!-- WIP Banner -->
+  <section class="wip-banner">
+    🚀 Work In Progress
+  </section>
 
-      <div class="flex flex-col sm:flex-row sm:space-x-4">
-        <img src="preview.png" alt="VR Room Preview" class="rounded w-full sm:w-1/2 mb-4 sm:mb-0">
-        <div class="space-y-3">
-          <a href="https://github.com/klajdi24/VR-Room-Project" target="_blank"
-             class="inline-block bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800">
-            View Code on GitHub
-          </a>
-          <a href="WebGL/index.html" target="_blank"
-             class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">
-            Play Project (WebGL)
-          </a>
-        </div>
+  <!-- Projects Section -->
+  <main class="projects-container">
+    <!-- VR Room Project Card -->
+    <div class="project-card">
+      <h2>VR Room Project</h2>
+      <p>
+        A virtual reality room built with Unity and XR Interaction Toolkit. Interactive objects, immersive room setup, and VR mechanics using C#.
+      </p>
+      <div class="card-buttons">
+        <a href="https://github.com/klajdi24/VR-Room-Project" target="_blank">View Code</a>
+        <a href="WebGL/index.html" target="_blank">Play Project</a>
       </div>
-    </section>
+    </div>
+
+    <!-- Placeholder Project Cards -->
+    <div class="project-card">
+      <h2>Project 2</h2>
+      <p>Description coming soon…</p>
+      <div class="card-buttons">
+        <a href="projects/placeholder.html">View Project</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h2>Project 3</h2>
+      <p>Description coming soon…</p>
+      <div class="card-buttons">
+        <a href="projects/placeholder.html">View Project</a>
+      </div>
+    </div>
   </main>
 
-  <footer class="text-center py-6 text-gray-500">
+  <!-- Footer -->
+  <footer class="footer">
     &copy; 2025 Klajdi Bakiri. All rights reserved.
   </footer>
+
+  <script src="js/animations.js"></script>
 </body>
 </html>
+
