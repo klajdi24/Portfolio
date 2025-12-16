@@ -25,6 +25,25 @@ body {
   color: #a1c9ff;
 }
 
+/* About Section */
+.about-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #1a1c2b;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(80, 160, 255, 0.2);
+}
+
+.about-section h2 {
+  color: #50a0ff;
+}
+
+.about-section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
 /* WIP Banner */
 .wip-banner {
   text-align: center;
@@ -33,6 +52,9 @@ body {
   color: #ff6a6a;
   font-weight: bold;
   letter-spacing: 1px;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 8px;
 }
 
 /* Projects Grid */
@@ -96,4 +118,5 @@ body {
   background: #111427;
   color: #555d78;
 }
+
 
