@@ -2,9 +2,9 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #0f111a; /* Dark futuristic background */
-  color: #a1c9ff; /* Soft blue text */
-  position: relative; /* needed for particles */
+  background-color: #0f111a;
+  color: #a1c9ff;
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -18,37 +18,8 @@ body {
   position: relative;
 }
 
-.header h1 {
-  font-size: 3rem;
-  margin: 0;
-  color: #50a0ff;
-}
-
-.header p {
-  margin: 0.5rem 0 0;
-  color: #a1c9ff;
-}
-
-/* About Section */
-.about-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: #1a1c2b;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(80, 160, 255, 0.2);
-  position: relative;
-  z-index: 5;
-}
-
-.about-section h2 {
-  color: #50a0ff;
-}
-
-.about-section ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
+.header h1 { font-size: 3rem; margin: 0; color: #50a0ff; }
+.header p { margin: 0.5rem 0 0; color: #a1c9ff; }
 
 /* WIP Banner */
 .wip-banner {
@@ -73,8 +44,6 @@ body {
   margin-bottom: 1rem;
   font-size: 2rem;
   letter-spacing: 1px;
-  position: relative;
-  z-index: 5;
 }
 
 /* Projects Grid */
@@ -101,26 +70,19 @@ body {
   align-items: center;
   text-align: center;
   will-change: transform;
-  z-index: 5;
   position: relative;
+  z-index: 5;
 }
 
 .project-card:hover {
   transform: translateY(-15px) scale(1.05) perspective(800px);
-  box-shadow: 0 0 40px rgba(80, 160, 255, 0.8);
+  box-shadow: 0 0 50px rgba(80, 160, 255, 0.8),
+              0 0 80px rgba(255, 0, 255, 0.4),
+              0 0 120px rgba(80, 160, 255, 0.2);
 }
 
-/* Project Titles & Text */
-.project-card h3 {
-  color: #50a0ff;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-card p {
-  color: #a1c9ff;
-  margin-bottom: 1rem;
-}
+.project-card h3 { color: #50a0ff; margin-top: 1rem; margin-bottom: 0.5rem; }
+.project-card p { color: #a1c9ff; margin-bottom: 1rem; }
 
 /* Project Images */
 .project-image {
@@ -144,7 +106,6 @@ body {
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
-  z-index: 5;
 }
 
 .card-buttons a {
@@ -157,10 +118,7 @@ body {
   font-weight: bold;
 }
 
-.card-buttons a:hover {
-  background: #1f70ff;
-  transform: scale(1.05);
-}
+.card-buttons a:hover { background: #1f70ff; transform: scale(1.05); }
 
 /* Footer */
 .footer {
@@ -172,13 +130,40 @@ body {
   z-index: 5;
 }
 
+/* ===== About Section ===== */
+.about-section {
+  max-width: 800px;
+  margin: 1rem auto 2rem;
+  padding: 1rem 1.5rem;
+  background: #141824;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(80, 160, 255, 0.15);
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 5;
+}
+
+.about-section h2 { font-size: 1.6rem; color: #50a0ff; margin-bottom: 0.5rem; }
+.about-intro { margin: 0.2rem 0 1rem; line-height: 1.5; color: #ccd9ff; }
+
+.skills-grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.skill-group { flex: 1; }
+.skill-group h3 { font-size: 1.2rem; margin-bottom: 0.3rem; color: #71b4ff; }
+.skill-group ul { list-style: none; padding: 0; margin: 0; }
+.skill-group ul li { margin: 0.2rem 0; color: #a9cfff; }
+
 /* ===== Particle Styles ===== */
 .particle {
   position: fixed;
-  background: linear-gradient(45deg, #ff00ff, #50a0ff); /* colorful gradient */
+  background: linear-gradient(45deg, #ff00ff, #50a0ff);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 2; /* above background but below cards */
+  z-index: 2;
   width: 8px;
   height: 8px;
   opacity: 0.9;
@@ -186,12 +171,6 @@ body {
   transition: transform 0.05s linear;
 }
 
-/* ===== Additional Hover Glow for Cards ===== */
-.project-card:hover {
-  box-shadow: 0 0 50px rgba(80, 160, 255, 0.8),
-              0 0 80px rgba(255, 0, 255, 0.4),
-              0 0 120px rgba(80, 160, 255, 0.2);
-}
 
 
 
