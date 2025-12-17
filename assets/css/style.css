@@ -154,21 +154,22 @@ body {
 /* ===== Particle Styles ===== */
 .particle {
   position: fixed;
-  background: rgba(80, 160, 255, 0.3);
+  background: rgba(255, 0, 255, 0.7); /* bright, obvious for testing */
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  transition: transform 0.1s linear;
+  transition: transform 0.05s linear;
 }
 
-/* ===== Card Lift Hover ===== */
+/* ===== Project Card Lift & Hover ===== */
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .project-card:hover {
-  transform: translateY(-10px) scale(1.02) perspective(1000px);
-  box-shadow: 0 0 30px rgba(80, 160, 255, 0.5);
+  transform: translateY(-15px) scale(1.05) perspective(800px);
+  box-shadow: 0 0 35px rgba(80, 160, 255, 0.7);
 }
 
 
