@@ -1,21 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   // ===== Particle Background =====
-  const particleCount = 80; // number of particles
+  const particleCount = 80;
   const particles = [];
 
   for (let i = 0; i < particleCount; i++) {
     const div = document.createElement("div");
     div.classList.add("particle");
-
-    // Random start position
     div.style.left = Math.random() * window.innerWidth + "px";
     div.style.top = Math.random() * window.innerHeight + "px";
-
-    // Random size
     const size = 4 + Math.random() * 6;
     div.style.width = size + "px";
     div.style.height = size + "px";
-
     document.body.appendChild(div);
     particles.push(div);
   }
@@ -24,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("mousemove", (e) => {
     particles.forEach((p, i) => {
       const speed = (i + 1) / particleCount;
-      p.style.transform = `translate(${(e.clientX - window.innerWidth / 2) * 0.05 * speed}px, ${(e.clientY - window.innerHeight / 2) * 0.05 * speed}px)`;
+      p.style.transform = `translate(${(e.clientX - window.innerWidth/2)*0.05*speed}px, ${(e.clientY - window.innerHeight/2)*0.05*speed}px)`;
     });
   });
 
@@ -47,12 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const rect = card.getBoundingClientRect();
       const center = window.innerHeight / 2;
       const offset = rect.top + rect.height / 2 - center;
-      const rotateX = (offset / 15) * 2; // bigger rotation
+      const rotateX = (offset / 15) * 2;
       const rotateY = (offset / 30) * 2;
       card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
   });
 });
+
 
 
 
