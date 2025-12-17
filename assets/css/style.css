@@ -1,9 +1,11 @@
-/* General Styles */
+/* ===== General Styles ===== */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
   background-color: #0f111a; /* Dark futuristic background */
   color: #a1c9ff; /* Soft blue text */
+  position: relative; /* needed for particles */
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -12,6 +14,8 @@ body {
   padding: 2rem 1rem;
   background: #111427;
   box-shadow: 0 0 10px #0f111a;
+  z-index: 10;
+  position: relative;
 }
 
 .header h1 {
@@ -33,6 +37,8 @@ body {
   background: #1a1c2b;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(80, 160, 255, 0.2);
+  position: relative;
+  z-index: 5;
 }
 
 .about-section h2 {
@@ -55,6 +61,8 @@ body {
   margin: 1rem auto;
   max-width: 600px;
   border-radius: 8px;
+  z-index: 5;
+  position: relative;
 }
 
 /* Section Titles */
@@ -65,6 +73,8 @@ body {
   margin-bottom: 1rem;
   font-size: 2rem;
   letter-spacing: 1px;
+  position: relative;
+  z-index: 5;
 }
 
 /* Projects Grid */
@@ -75,6 +85,8 @@ body {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
+  position: relative;
+  z-index: 5;
 }
 
 /* Project Card */
@@ -83,18 +95,22 @@ body {
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(80, 160, 255, 0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  will-change: transform;
+  z-index: 5;
+  position: relative;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(80, 160, 255, 0.4);
+  transform: translateY(-15px) scale(1.05) perspective(800px);
+  box-shadow: 0 0 40px rgba(80, 160, 255, 0.8);
 }
 
+/* Project Titles & Text */
 .project-card h3 {
   color: #50a0ff;
   margin-top: 1rem;
@@ -117,8 +133,8 @@ body {
 }
 
 .project-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(80, 160, 255, 0.4);
+  transform: scale(1.07);
+  box-shadow: 0 0 35px rgba(80, 160, 255, 0.5);
 }
 
 /* Card Buttons */
@@ -128,6 +144,7 @@ body {
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 5;
 }
 
 .card-buttons a {
@@ -136,12 +153,13 @@ body {
   color: #0f111a;
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
   font-weight: bold;
 }
 
 .card-buttons a:hover {
   background: #1f70ff;
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -150,27 +168,31 @@ body {
   padding: 1rem;
   background: #111427;
   color: #555d78;
+  position: relative;
+  z-index: 5;
 }
+
 /* ===== Particle Styles ===== */
 .particle {
   position: fixed;
-  background: rgba(255, 0, 255, 0.7); /* bright, obvious for testing */
+  background: linear-gradient(45deg, #ff00ff, #50a0ff); /* colorful gradient */
   border-radius: 50%;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2; /* above background but below cards */
+  width: 8px;
+  height: 8px;
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
   transition: transform 0.05s linear;
 }
 
-/* ===== Project Card Lift & Hover ===== */
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform;
+/* ===== Additional Hover Glow for Cards ===== */
+.project-card:hover {
+  box-shadow: 0 0 50px rgba(80, 160, 255, 0.8),
+              0 0 80px rgba(255, 0, 255, 0.4),
+              0 0 120px rgba(80, 160, 255, 0.2);
 }
 
-.project-card:hover {
-  transform: translateY(-15px) scale(1.05) perspective(800px);
-  box-shadow: 0 0 35px rgba(80, 160, 255, 0.7);
-}
 
 
 
